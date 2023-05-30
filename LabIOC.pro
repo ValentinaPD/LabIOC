@@ -16,8 +16,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp \
     processor.cpp \
-    intelprocessor.cpp
+    intelprocessor.cpp \
+    computer.cpp
 
 HEADERS += \
     processor.h \
-    intelprocessor.h
+    intelprocessor.h \
+    computer.h

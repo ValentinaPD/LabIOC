@@ -1,10 +1,12 @@
 #include "intelprocessor.h"
 
-IntelProcessor::IntelProcessor()
+IntelProcessor::IntelProcessor(double _speed, std::string _version)
 {
-
+    speed = _speed;
+    //type = _type;
+    version = _version;
 }
-QString IntelProcessor::GetInfoProcessor() const
+std::string IntelProcessor::GetInfoProcessor() const
 {
-    return "Intel Processor. Version: " + version + ". Type: " + type + ". Speed: " + speed;
+    return "Intel Processor. Version: " + version + ". Type: " + ". Speed: ";
 }

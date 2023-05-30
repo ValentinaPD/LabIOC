@@ -1,6 +1,6 @@
 #ifndef PROCESSOR_H
 #define PROCESSOR_H
-#include "QString"
+#include "string"
 
 enum ProcessorType
 {
@@ -10,13 +10,13 @@ enum ProcessorType
 class Processor
 {
 protected:
-    QString version;
+    std::string version;
     ProcessorType type;
     double speed;
 
 public:
     Processor();
-    virtual QString GetInfoProcessor() const = 0;
+    virtual std::string GetInfoProcessor() const = 0;
 };
 
 #endif // PROCESSOR_H

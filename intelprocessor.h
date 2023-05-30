@@ -5,8 +5,8 @@
 class IntelProcessor: public Processor
 {
 public:
-    IntelProcessor();
-    QString GetInfoProcessor() const;
+    IntelProcessor(double _speed, std::string _version);
+    std::string GetInfoProcessor() const;
 };
 
 #endif // INTELPROCESSOR_H
