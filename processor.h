@@ -11,7 +11,7 @@ class Processor
 {
 protected:
     std::string version;
-    ProcessorType type;
+    std::string type;
     double speed;
 
 public:
