@@ -8,9 +8,8 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-    std::cout << "=================================" << std::endl;
-    IntelProcessor* pro = new IntelProcessor(12.0, "x64","78");
+    AmdProcessor* pro = new AmdProcessor(12.0, ProcessorType::x64,"78");
     Computer comp(pro);
-    std::cout << comp.GetProcessorInfo();
+    std::cout << comp.GetProcessorInfo()<<std::endl;
     return a.exec();
 }

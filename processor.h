@@ -1,6 +1,7 @@
 #ifndef PROCESSOR_H
 #define PROCESSOR_H
 #include "string"
+#include <vector>
 
 enum ProcessorType
 {
@@ -11,8 +12,9 @@ class Processor
 {
 protected:
     std::string version;
-    std::string type;
+    unsigned int type;
     double speed;
+    const std::vector<std::string> processor_type = {"x86","x64"};
 
 public:
     Processor();

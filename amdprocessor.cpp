@@ -1,6 +1,6 @@
 #include "amdprocessor.h"
 
-AmdProcessor::AmdProcessor(double _speed, std::string _type ,const std::string& _version)
+AmdProcessor::AmdProcessor(double _speed, unsigned int _type ,const std::string& _version)
 {
     speed = _speed;
     type = _type;
@@ -8,5 +8,5 @@ AmdProcessor::AmdProcessor(double _speed, std::string _type ,const std::string& 
 }
 std::string AmdProcessor::GetInfoProcessor() const
 {
-    return "Amd Processor. Version: " + version + ". Type: "+ type + ". Speed: " + std::to_string(speed);
+    return "Amd Processor. Version: " + version + ". Type: "+ processor_type[type] + ". Speed: " + std::to_string(speed);
 }
