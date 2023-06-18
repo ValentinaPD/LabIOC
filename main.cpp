@@ -1,7 +1,5 @@
 #include <QCoreApplication>
 #include <processor.h>
-#include <intelprocessor.h>
-#include <amdprocessor.h>
 #include <computer.h>
 #include <iostream>
 using namespace std;
