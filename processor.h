@@ -12,7 +12,8 @@ class Processor
 {
 protected:
 public:
-    virtual std::string GetInfoProcessor() const = 0;
+    virtual std::string GetInfo() const = 0;
+    virtual void Set(double _speed, unsigned int _type ,const std::string& _version) = 0;
     virtual ~Processor() = default;
 };
 
@@ -23,8 +24,11 @@ public:
     unsigned int type;
     double speed;
     const std::vector<std::string> processor_type = {"x86","x64"};
-    AmdProcessor(double _speed, unsigned int _type ,const std::string& _version);
-    std::string GetInfoProcessor() const;
+    AmdProcessor();
+    void Set(double _speed, unsigned int _type ,const std::string& _version);
+    std::string GetInfo() const;
+    virtual ~AmdProcessor() = default;
+
 };
 
 class IntelProcessor: public Processor
@@ -34,8 +38,10 @@ public:
     unsigned int type;
     double speed;
     const std::vector<std::string> processor_type = {"x86","x64"};
-    IntelProcessor(double _speed, unsigned int _type ,const std::string& _version);
-    std::string GetInfoProcessor() const;
+    void Set(double _speed, unsigned int _type ,const std::string& _version);
+    IntelProcessor();
+    std::string GetInfo() const;
+    virtual ~IntelProcessor() = default;
 };
 
 #endif // PROCESSOR_H

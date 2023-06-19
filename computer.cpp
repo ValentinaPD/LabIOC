@@ -6,5 +6,5 @@ Computer::Computer(Processor* _processor)
 }
 std::string Computer::GetProcessorInfo()
 {
-    return processor->GetInfoProcessor();
+    return processor->GetInfo();
 }
